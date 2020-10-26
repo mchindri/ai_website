@@ -43,7 +43,7 @@ def calculate_points(img):
   center = (int(width / 2) + ss.x, int(height / 2) + ss.y)
   
   center = (max(0, min(center[0], width)), max(0, min(center[1], height)))
-  st.text(center)
+  #st.text(center)
 
   p0 = [center[0] - delta, center[1] - delta]
   p1 = [center[0] + delta, center[1] + delta]
@@ -69,7 +69,7 @@ def draw_regtangle(img):
   gp0 = p0
   gp1 = p1
   cv2.rectangle(img, (p0[0], p0[1]), (p1[0], p1[1]), (0, 255, 0), 2)
-  st.write((p0[0], p0[1]), (p1[0], p1[1]))
+  #st.write((p0[0], p0[1]), (p1[0], p1[1]))
   return img
 
 #		roi = clone[p0[1]:p1[1], p0[0]:p1[0]]
@@ -114,6 +114,8 @@ st.title('Up Farm (by Eccodictive) -- Geek 2020')
 read_buttons()
 #st.text(get_prediction(img))
 img = upload_image()
+if img is None:
+  img = local_image()
 #img = local_image()
 if img is not None:
   img = add_rectangle(img)
