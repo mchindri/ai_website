@@ -110,7 +110,7 @@ def add_rectangle(img):
     img = keras.preprocessing.image.array_to_img(img)
     return img
 
-st.title('Up Farm (by Ecoddictive) -- Geek 2020')
+st.title('Up Farm (by Ecoddictive) -- GEEC 2020')
 read_buttons()
 #st.text(get_prediction(img))
 img = upload_image()
